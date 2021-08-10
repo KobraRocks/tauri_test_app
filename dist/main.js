@@ -39,6 +39,9 @@ if (moduleContent3) {
 
 
 // Test invoke command
+// import fails
+// import { invoke } from '../@tauri-apps/api/tauri';
+// using global instead...
 const invoke = window.__TAURI__.invoke;
 
 // Promise with no error hanlding
