@@ -1,5 +1,5 @@
 {
-  "name": "Tauri Test App",
+  "name": "tauri_test_app",
   "scripts": {
     "tauri": "tauri"
   },
