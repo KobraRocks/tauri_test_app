@@ -3,6 +3,8 @@
 
 > Disclaimer: Tests executed are not automated. I followed Tauri documentation to build this app.
 
+I've created a UI to show success or failure for tests. Just run `npm run tauri dev --verbose` to see the app in action.
+
 ## link and open a local html file
 success
 
