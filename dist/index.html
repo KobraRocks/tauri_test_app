@@ -22,7 +22,8 @@
         </p>
         <p id="moduleElement1" class="error">Failed to load the module!</p>
         
-        <p>Should show a module content from an export</p>
+        
+        <p>Should show module a content from an export</p>
         <p class="code">import { moduleFunction } from './module.js'<br><br>
         
         // in module.js<br>
@@ -30,6 +31,19 @@
         </p>
         
         <p id="moduleElement2" class="error">Failed to load the module!</p>
+        
+
+        <p>Should show module a content from multiple export</p>
+        <p class="code">import { moduleFunction, anotherModuleFunction } from './module.js'<br><br>
+        
+        // in module.js<br>
+        export function moduleFunction () { return 'I am a module content'; }<br>
+        export function anotherModuleFunction () {
+            return 'I am another module content';
+        }
+        </p>
+        
+        <p id="moduleElement3" class="error">Failed to load the modules!</p>        
         
         <p>Should show a message from rust invoke command: promise_no_error_handling</p>
         <p id="invokeCommandPromiseNoErrorHandling" class="error">Failed to receive message from promise</p>

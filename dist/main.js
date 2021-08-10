@@ -14,8 +14,8 @@ import('./module.js').then((moduleDefaultFunction) => {
 });
 
    
-// Test importing module with simple export
-import { moduleFunction } from './module.js';
+// Test importing module with multiple export
+import { moduleFunction, anotherModuleFunction } from './module.js';
 const moduleContent2 = moduleFunction();
 const moduleElement2 = document.querySelector('#moduleElement2');
 if (moduleContent2) {
@@ -24,6 +24,16 @@ if (moduleContent2) {
     moduleElement2.classList.remove('error');
     moduleElement2.classList.add('success');
 }
+
+const moduleContent3 = anotherModuleFunction();
+const moduleElement3 = document.querySelector('#moduleElement3');
+if (moduleContent3) {
+    console.log('module content found');
+    moduleElement3.textContent = moduleContent2 +'. '+ moduleContent3;
+    moduleElement3.classList.remove('error');
+    moduleElement3.classList.add('success');
+}
+
 
 
 
