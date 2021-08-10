@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <link href="./default.css" rel="stylesheet">
+  </head>
+  <body>
+    <header></header>
+    <main>
+        <h1>Tauri Test App</h1>
+        <a href="./other.html">should got to next html file</a><br>
+        <a href="https://tauri.studio">should load tauri.studio</a>
+        <p>Should show a module content:</p>
+        <p id="moduleElement" class="error">Failed to load the module!</p>
+        
+        <p>Should show a message from rust invoke command: promise_no_error_handling</p>
+        <p id="invokeCommandPromiseNoErrorHandling" class="error">Failed to receive message from promise</p>
+        
+        <p>Should show a success message from rust invoke command: promise_with_err_handling</p>
+        <p id="invokeCommandPromiseWithErrorHandling" class="error">Nothing happened...</p>
+        
+    </main>
+    <footer></footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
