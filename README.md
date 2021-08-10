@@ -15,11 +15,21 @@ import moduleFunction from "./module.js"
 ```
 failed
 
+```
+SyntaxError: Unexpected identifier 'moduleFunction'. import call expects exactly one argument.
+```
+
 ## invoke command promise no error handling
 failed
+```
+SyntaxError: Unexpected EOF
+```
 
 ## invoke command promise with error handling
 failed
+```
+SyntaxError: Unexpected EOF
+```
 
 
 # My set up
