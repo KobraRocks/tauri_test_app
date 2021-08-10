@@ -12,24 +12,29 @@ success
 ## load a javascript module using
 ```javascript 
 import moduleFunction from "./module.js"
+
+// in module.js
+export default () => 'I am a module content';
 ```
 failed
-
 ```
 SyntaxError: Unexpected identifier 'moduleFunction'. import call expects exactly one argument.
 ```
 
+```javascript 
+import { moduleFunction } from "./module.js"
+
+// in module.js
+export function moduleFunction () { return 'I am a module content';}
+```
+success
+
+
 ## invoke command promise no error handling
-failed
-```
-SyntaxError: Unexpected EOF
-```
+Success
 
 ## invoke command promise with error handling
 failed
-```
-SyntaxError: Unexpected EOF
-```
 
 
 # My set up

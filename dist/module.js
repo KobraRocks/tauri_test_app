@@ -1,1 +1,1 @@
-export default () => 'I am a module content';
+export function moduleFunction () { return 'I am a module content'; };
