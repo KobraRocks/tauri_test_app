@@ -1,15 +1,31 @@
 const body = document.querySelector('body');
 
-// Test importing module
+
+// Test importing module with default export
+import('./module.js').then((moduleDefaultFunction) => {
+    const moduleContent1 = moduleDefaultFunction();
+    const moduleElement1 = document.querySelector('#moduleElement1');
+    if (moduleContent1) {
+        console.log('module default content found');
+        moduleElement1.textContent = moduleContent1;
+        moduleElement1.classList.remove('error');
+        moduleElement1.classList.add('success');
+    }      
+});
+
+   
+// Test importing module with simple export
 import { moduleFunction } from './module.js';
-const moduleContent = moduleFunction();
-const moduleElement = document.querySelector('#moduleElement');
-if (moduleContent) {
+const moduleContent2 = moduleFunction();
+const moduleElement2 = document.querySelector('#moduleElement2');
+if (moduleContent2) {
     console.log('module content found');
-    moduleElement.textContent = moduleContent;
-    moduleElement.classList.remove('error');
-    moduleElement.classList.add('success');
+    moduleElement2.textContent = moduleContent2;
+    moduleElement2.classList.remove('error');
+    moduleElement2.classList.add('success');
 }
+
+
 
 
 // Test invoke command
@@ -31,8 +47,8 @@ const element2 = document.querySelector('#invokeCommandPromiseWithErrorHandling'
 
 invoke('promise_with_error_handling', { invokeMessage: 'success' })
     .then((message) => { 
-        element1.textContent = message;
-        element1.classList.remove('error');
-        element1.classList.add('success');
+        element2.textContent = message;
+        element2.classList.remove('error');
+        element2.classList.add('success');
     })
     .catch((err) => console.log('Error: '+ err));

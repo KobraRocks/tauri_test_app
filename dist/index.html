@@ -10,10 +10,26 @@
     <header></header>
     <main>
         <h1>Tauri Test App</h1>
-        <a href="./other.html">should got to next html file</a><br>
+        
+        <a href="./other.html">should got to other.html file</a><br>
         <a href="https://tauri.studio">should load tauri.studio</a>
-        <p>Should show a module content:</p>
-        <p id="moduleElement" class="error">Failed to load the module!</p>
+        
+        <p>Should show a module content from a defaultExport</p>
+        <p class="code">import moduleFunction from './module.js'<br><br>
+        
+        // in module.js<br>
+        export default () => 'I am a module content';
+        </p>
+        <p id="moduleElement1" class="error">Failed to load the module!</p>
+        
+        <p>Should show a module content from an export</p>
+        <p class="code">import { moduleFunction } from './module.js'<br><br>
+        
+        // in module.js<br>
+        export function moduleFunction () { return 'I am a module content'; }
+        </p>
+        
+        <p id="moduleElement2" class="error">Failed to load the module!</p>
         
         <p>Should show a message from rust invoke command: promise_no_error_handling</p>
         <p id="invokeCommandPromiseNoErrorHandling" class="error">Failed to receive message from promise</p>

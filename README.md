@@ -12,17 +12,19 @@ success
 success
 
 ## load a javascript module using
+### default export
 ```javascript 
 import moduleFunction from "./module.js"
 
 // in module.js
 export default () => 'I am a module content';
 ```
-failed
+failed, not implemented yet ?
 ```
 SyntaxError: Unexpected identifier 'moduleFunction'. import call expects exactly one argument.
 ```
 
+### simple export
 ```javascript 
 import { moduleFunction } from "./module.js"
 
@@ -36,7 +38,7 @@ success
 Success
 
 ## invoke command promise with error handling
-failed
+Success
 
 
 # My set up
