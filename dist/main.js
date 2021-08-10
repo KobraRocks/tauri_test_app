@@ -1,8 +1,8 @@
 const body = document.querySelector('body');
 
 // Test importing module
-import makeModule from './module.js';
-const moduleContent = makeModule();
+import moduleFunction from './module.js';
+const moduleContent = moduleFunction();
 const moduleElement = document.querySelector('moduleElement');
 if (moduleContent) {
     moduleElement.textContent = moduleContent;
