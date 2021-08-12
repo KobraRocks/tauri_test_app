@@ -40,6 +40,8 @@ Success
 ## invoke command promise with error handling
 Success
 
+## Initialize a webworker and receive a message
+Success
 
 # My set up
 ```

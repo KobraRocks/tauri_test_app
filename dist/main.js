@@ -65,3 +65,13 @@ invoke('promise_with_error_handling', { invokeMessage: 'success' })
         element2.classList.add('success');
     })
     .catch((err) => console.log('Error: '+ err));
+
+// Test if web workers work :)
+const worker = new Worker('./worker.js');
+const workerElement = document.querySelector('#worker');
+worker.onmessage = (message) => {
+    workerElement.textContent = message.data;
+    workerElement.classList.remove('error');
+    workerElement.classList.add('success');
+}
+worker.postMessage('Hello worker!');    
